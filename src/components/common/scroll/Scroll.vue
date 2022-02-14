@@ -64,8 +64,10 @@ export default {
       this.scroll.finishPullUp()
     },
     refresh(){
-      console.log('-------');//删掉
       this.scroll && this.scroll.refresh()
+    },
+    getScrollY(){
+      return this.scroll ? this.scroll.y : 0;
     }
   }
 }
