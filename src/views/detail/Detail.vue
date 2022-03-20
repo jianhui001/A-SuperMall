@@ -13,8 +13,8 @@
       <DetailCommentInfo ref="comment" :comment-info="commentInfo"  />
       <GoodsList ref="recommend" :goods="recommends"  />
     </Scroll>
-    <DetailBottomBar @addCart="addToCart"></DetailBottomBar>
-    <BackTop @click.native="backClick" v-show="isShowBackTop"></BackTop>
+    <DetailBottomBar @addCart="addToCart"/>
+    <BackTop class="back-top" @click.native="backClick" v-show="isShowBackTop"/>
   </div>
 </template>
 
@@ -188,21 +188,19 @@ export default {
 </script>
 
 <style scoped>
-  #detail{
-    /*隐藏main-tab-bar*/
-    position: relative;
-    z-index: 9;
-    background-color: #ffffff;
-    height: 100vh;
-  }
+#detail {
+  position: relative;
+  background-color: #fff;
+  height: 100vh;
+}
 
-  .content{
-    height: calc(100% - 44px );
-  }
+.detail-nav {
+  background-color: #fff;
+}
 
-  .detail-nav{
-    position: relative;
-    z-index: 9;
-    background-color: #ffffff;
-  }
+/* 给一个固定的高度 */
+.content {
+  height: calc(100% - 44px);
+  overflow: hidden;
+}
 </style>

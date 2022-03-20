@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-bar">
+  <div id="nav-bar">
     <div class="left"><slot name="left"></slot></div>
     <div class="center"><slot name="center"></slot></div>
     <div class="right"><slot name="right"></slot></div>
@@ -13,13 +13,17 @@ export default {
 </script>
 
 <style>
-  .nav-bar{
+  #nav-bar{
+    position: relative;
+    z-index: 9;
+
     display: flex;
+
     height: 44px;
     line-height: 44px;
     text-align: center;
+
     box-shadow: 0 1px 1px rgba(100,100,100,.1);
-    z-index: 10;
   }
   .left,.right{
     width: 60px;

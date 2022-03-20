@@ -15,7 +15,7 @@ name: "BackTop"
    position: fixed;
    right: 10px;
    bottom: 50px;
-   z-index: 99;
+   z-index: 999;
  }
  .back-top img{
    width: 65px;

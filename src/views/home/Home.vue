@@ -48,7 +48,6 @@ import GoodsList from "@/components/content/goods/GoodsList";
 import Scroll from "@/components/common/scroll/Scroll";
 
 import {getHomeMultidata,getHomeGoods} from "@/network/home"
-//import {debounce} from "@/common/utils";
 import {itemListenerMixin,backTopMixin} from "@/common/mixin";
 import {BACK_POSITION} from "@/common/const";
 export default {
@@ -86,14 +85,6 @@ export default {
     this.getHomeGoods('sell')
 
   },
-  mounted() {
-    // //1.监听滚动
-    // const refresh = debounce(this.$refs.scroll.refresh,200)
-    // this.$bus.$on('itemImageLoad',()=>{
-    //   refresh()
-    // })
-    //mixin中已实现
-  },
   destroyed(){
     console.log("home destroyed");
   },
@@ -130,6 +121,8 @@ export default {
 
     //3.
     //  Object.keys会返回一个由给定对象的自身可枚举属性组成的数组
+    // Object.keys(this.goods)即相当于array,
+    //Object.keys(this.goods)[index]=array[index]
     this.currentType = Object.keys(this.goods)[index]
     this.$refs.tabControl1.currentIndex = index;
     this.$refs.tabControl2.currentIndex = index;
@@ -164,10 +157,12 @@ export default {
       const page = this.goods[type].page + 1;
       getHomeGoods(type,page).then(res=>{
         // this.goods[type].list = this.goods[type].list.concat(...res.data.list)
+
+        //es6扩展运算符... 将一个数组转为用逗号分隔的参数序列,直接push会将整个数组作为一个数据
         this.goods[type].list.push(...res.data.data.list)
         this.goods[type].page+=1
 
-        //完成上拉加载更多
+        //完成上拉加载更多,否则只能加载一次
         this.$refs.scroll.finishPullUp()
       })
     }

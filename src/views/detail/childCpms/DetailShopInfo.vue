@@ -52,87 +52,184 @@ export default {
 </script>
 
 <style scoped>
-  .shop-info{
+  /*.shop-info{*/
+  /*  padding: 25px 8px;*/
+  /*  border-bottom: 5px solid #f2f5f8;*/
+  /*}*/
+  /*.shop-top{*/
+  /*  line-height: 45px;*/
+  /*  display: flex;*/
+  /*  !*指定float容器内项目在横轴方向的对齐方式*!*/
+  /*  align-items: center;*/
+  /*}*/
+  /*.shop-top img{*/
+  /*  width: 45px;*/
+  /*  border-radius: 50%;*/
+  /*  border: 1px solid rgba(0,0,0,.1);*/
+  /*}*/
+  /*.shop-top .title{*/
+  /*  font-size: 18px;*/
+  /*  margin-left: 10px;*/
+  /*  vertical-align: center;*/
+  /*}*/
+  /*.shop-middle{*/
+  /*  margin-top: 15px;*/
+  /*  display: flex;*/
+  /*  color: #333;*/
+  /*  align-items: center;*/
+  /*}*/
+  /*.shop-middle-item{*/
+  /*  flex: 1;*/
+  /*}*/
+  /*.shop-middle-left{*/
+  /*  display: flex;*/
+  /*  justify-content: space-evenly;*/
+  /*  color: #333;*/
+  /*  text-align: center;*/
+  /*  border-right: 1px solid rgba(0,0,0,.1);*/
+  /*}*/
+  /*.sells-count, .goods-count {*/
+  /*  font-size: 18px;*/
+  /*}*/
+  /*.sells-text, .goods-text {*/
+  /*  margin-top: 10px;*/
+  /*  font-size: 12px;*/
+  /*}*/
+  /*.shop-middle-right {*/
+  /*  font-size: 15px;*/
+  /*  color: #333;*/
+  /*}*/
+  /*.shop-middle-right table {*/
+  /*  width: 120px;*/
+  /*  margin-left: 30px;*/
+  /*  text-align: center;*/
+  /*}*/
+  /*.shop-middle-right table td {*/
+  /*  padding: 5px 0;*/
+  /*}*/
+  /*.shop-middle-right .score{*/
+  /*  color: #f13e3a;*/
+  /*}*/
+  /*.shop-middle-right .score-better{*/
+  /*  color:#5ea732 ;*/
+  /*}*/
+  /*.shop-middle-right .better span{*/
+  /*  background-color: #f13e3a;*/
+  /*  color: #fff;*/
+  /*}*/
+  /*.shop-middle-right .better-more span{*/
+  /*  background-color:#5ea732 ;*/
+  /*}*/
+  /*.shop-bottom {*/
+  /*  text-align: center;*/
+  /*  margin-top: 10px;*/
+  /*}*/
+  /*.enter-shop{*/
+  /*  display: inline-block;*/
+  /*  width: 150px;*/
+  /*  height: 30px;*/
+  /*  line-height: 30px;*/
+  /*  font-size: 14px;*/
+  /*  background-color: #f2f5f8;*/
+  /*  border-radius: 10px;*/
+  /*  text-align: center;*/
+  /*}*/
+  .shop-info {
     padding: 25px 8px;
     border-bottom: 5px solid #f2f5f8;
   }
-  .shop-top{
+
+  .shop-top {
     line-height: 45px;
+    /* 让元素垂直中心对齐 */
     display: flex;
-    /*指定float容器内项目在横轴方向的对齐方式*/
     align-items: center;
   }
-  .shop-top img{
+
+  .shop-top img {
     width: 45px;
+    height: 45px;
     border-radius: 50%;
     border: 1px solid rgba(0,0,0,.1);
   }
-  .shop-top .title{
-    font-size: 18px;
+
+  .shop-top .title {
     margin-left: 10px;
     vertical-align: center;
   }
-  .shop-middle{
+
+  .shop-middle {
     margin-top: 15px;
     display: flex;
-    color: #333;
     align-items: center;
   }
-  .shop-middle-item{
+
+  .shop-middle-item {
     flex: 1;
   }
-  .shop-middle-left{
+
+  .shop-middle-left {
     display: flex;
     justify-content: space-evenly;
     color: #333;
     text-align: center;
     border-right: 1px solid rgba(0,0,0,.1);
   }
+
   .sells-count, .goods-count {
     font-size: 18px;
   }
+
   .sells-text, .goods-text {
     margin-top: 10px;
     font-size: 12px;
   }
+
   .shop-middle-right {
-    font-size: 15px;
+    font-size: 13px;
     color: #333;
   }
+
   .shop-middle-right table {
     width: 120px;
     margin-left: 30px;
-    text-align: center;
   }
+
   .shop-middle-right table td {
     padding: 5px 0;
   }
-  .shop-middle-right .score{
+
+  .shop-middle-right .score {
+    color: #5ea732;
+  }
+
+  .shop-middle-right .score-better {
     color: #f13e3a;
   }
-  .shop-middle-right .score-better{
-    color:#5ea732 ;
-  }
-  .shop-middle-right .better span{
-    background-color: #f13e3a;
+
+  .shop-middle-right .better span {
+    background-color: #5ea732;
     color: #fff;
+    text-align: center;
   }
-  .shop-middle-right .better-more span{
-    background-color:#5ea732 ;
+
+  .shop-middle-right .better-more span {
+    background-color: #f13e3a;
   }
+
   .shop-bottom {
     text-align: center;
     margin-top: 10px;
   }
-  .enter-shop{
+
+  .enter-shop {
     display: inline-block;
-    width: 150px;
-    height: 30px;
-    line-height: 30px;
     font-size: 14px;
     background-color: #f2f5f8;
-    border-radius: 10px;
+    width: 150px;
+    height: 30px;
     text-align: center;
-
+    line-height: 30px;
+    border-radius: 10px;
   }
 </style>

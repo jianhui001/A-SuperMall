@@ -11,14 +11,12 @@
 import NavBar from "@/components/common/navbar/NavBar";
 import CartList from "@/views/cart/childCpns/CartList";
 
-import Scroll from "@/components/common/scroll/Scroll";
 import {mapGetters} from 'vuex'
 export default {
   name: "cart",
   components:{
     NavBar,
-    CartList,
-    Scroll
+    CartList
   },
   computed:{
     //两种语法

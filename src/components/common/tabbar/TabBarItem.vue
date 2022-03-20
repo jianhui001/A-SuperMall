@@ -16,11 +16,6 @@
 <script>
 export default {
   name: "TabBarItem",
-  data(){
-    return {
-      // isActive: true
-    }
-  },
   props:{
     path:String,
     activeColor:{
@@ -35,8 +30,9 @@ export default {
   },
   computed:{
     isActive(){
+      // indexOf()返回某个指定的字符串值在字符串中首次出现的位置。  == -1 说明不存在
       return this.$route.path.indexOf(this.path)!== -1
-
+      //这个也行
       // return this.$route.path === this.path
     },
     activeStyle(){

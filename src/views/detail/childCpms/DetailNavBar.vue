@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav-bar>
+    <nav-bar class="detail-bar">
       <div slot="left">
         <img src="~assets/img/common/back.svg" alt="" @click="backClick">
       </div>
@@ -44,7 +44,7 @@ export default {
 <style scoped>
 .title{
   display: flex;
-
+  font-weight: normal;
 }
 .titleItem{
   flex: 1;

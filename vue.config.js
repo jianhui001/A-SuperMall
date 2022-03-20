@@ -14,6 +14,7 @@ module.exports={
     overlay: {
       warning: false,
       errors: false
-    }
+    },
+    publicPath:'./'
   },
 }

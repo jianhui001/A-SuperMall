@@ -43,6 +43,7 @@ export default {
   .goods-item{
     position: relative;
     padding-bottom: 40px;
+    /*一行两个*/
     width: 48%;
   }
   .goods-item img{
